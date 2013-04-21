@@ -474,6 +474,9 @@ class InstancesTable(tables.DataTable):
     state = tables.Column(get_power_state,
                           filters=(title, replace_underscores),
                           verbose_name=_("Power State"))
+    numprocs = tables.Column("numprocs",
+                          filters=(title, replace_underscores),
+                          verbose_name=_("Running Processes"))
 
     class Meta:
         name = "instances"
