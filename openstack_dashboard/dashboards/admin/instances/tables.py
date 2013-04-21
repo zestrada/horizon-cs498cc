@@ -109,6 +109,8 @@ class AdminInstancesTable(tables.DataTable):
     state = tables.Column(get_power_state,
                           filters=(title, replace_underscores),
                           verbose_name=_("Power State"))
+    numprocs = tables.Column("numprocs",
+                             verbose_name=_("Processes")) 
 
     class Meta:
         name = "instances"
